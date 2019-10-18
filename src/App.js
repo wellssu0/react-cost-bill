@@ -1,26 +1,21 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Provider } from 'react-redux'
 
-function App() {
+import { BrowserRouter as Router, Route, Link} from 'react-router-dom'
+import store from "./store"
+import Home from './page/home'
+import Create from './page/create'
+
+const App =()=> {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <Provider store={store}>
+      <Router>
+        <Route path='/' exact component={Home}></Route>
+        <Route path='/create' exact component={Create}></Route>
+        <Route path='/edit/id' exact component={Create}></Route>
+      </Router>
+    </Provider>
+  )
 }
 
-export default App;
+export default React.memo(App)
