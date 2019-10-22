@@ -2,9 +2,9 @@ import { combineReducers } from "redux-immutable"
 import homeReducer from './homeReducer'
 import createReducer from './createReducer'
 
-const appReducer = combineReducers({
+const rootReducer = combineReducers({
   home : homeReducer,
   create: createReducer
 })
 
-export default appReducer
+export default rootReducer
