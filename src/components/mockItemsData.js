@@ -2,13 +2,13 @@ import Mock from 'mockjs'
 
 export default Mock.mock('./postItemsData','post',{
   success:true,
-  "items|5-10":[
+  "items|100":[
     {
-      "id+1": 1 ,
-      "title": "@cword(5,20)",
-      "price|0-99999": 1,
+      "id|+1": 0 ,
+      "title": "@cword(2,15)",
+      "price|0-9999": 1,
       "date": "@date",
-      "cid" : "@integer(1-14)"
+      "cid" : "@integer(0,13)"
     }
   ]
 

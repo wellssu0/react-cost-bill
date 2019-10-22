@@ -1,19 +1,19 @@
 import React from 'react'
 import Ionicon from 'react-ionicons'
 import { connect } from 'react-redux'
-import * as constants from '../page/home/store/constants'
-import * as actionCreators from '../page/home/store/actionCreators'
+
+import * as actions from '../actions'
+import * as constants from '../constants'
 
 const SwitchViewTab = (props) => {
   const { tabView , handleListTab,handleChartTab} = props
- 
   return (
-      <ul class="nav nav-tabs nav-fill my-2 font-weight-bold">
-        <li class="nav-item " >
+      <ul className="nav nav-tabs nav-fill my-2 font-weight-bold">
+        <li className="nav-item " >
           <a
             href="/"
             className={tabView === constants.LIST_VIEW ? "nav-link active" : "nav-link"}
-            onClick={(event)=>handleListTab(event)}
+            onClick={(event)=>handleListTab(event,tabView)}
           >
           <Ionicon
             className="rounded-circle mr-z"
@@ -24,11 +24,11 @@ const SwitchViewTab = (props) => {
           列表模式
           </a>
         </li>
-        <li class="nav-item" >
+        <li className="nav-item" >
           <a
             href="/"
             className={tabView === constants.CHART_VIEW ? "nav-link active" : "nav-link"}
-            onClick={(event)=>handleChartTab(event)}
+            onClick={(event)=>handleChartTab(event,tabView)}
           >
           <Ionicon
             className="rounded-circle mr-z"
@@ -49,13 +49,17 @@ const mapState = state => ({
   tabView: state.getIn(['home','tabView']),
 })
 const mapDispatch = dispatch => ({
-  handleListTab(event){
+  handleListTab(event,tabView){
     event.preventDefault()
-    dispatch(actionCreators.getListTabAction())
+    if(tabView === constants.CHART_VIEW){
+      dispatch(actions.getListTabAction())
+    }
   },
-  handleChartTab(event){
+  handleChartTab(event,tabView){
     event.preventDefault()
-    dispatch(actionCreators.getChartTabAction())
+    if(tabView === constants.LIST_VIEW){
+      dispatch(actions.getChartTabAction())
+    }
   }
 })
 

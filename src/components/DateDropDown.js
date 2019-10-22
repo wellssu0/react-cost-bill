@@ -1,8 +1,8 @@
 import React,{useEffect} from 'react'
 import { connect } from 'react-redux'
 
-import * as actionCreators from '../page/home/store/actionCreators'
-import * as constants from '../page/home/store/constants'
+import * as actions from '../actions'
+import * as constants from '../constants'
 
 const node = React.createRef()
 
@@ -20,7 +20,7 @@ const DateDropDown = (props) => {
   
   return (
     <div className='dropdown ' ref={node}>
-      <label for="btn-dropdown" className="text-secondary font-weight-light">选择日期：</label>
+      <label htmlFor="btn-dropdown" className="text-secondary font-weight-light">选择日期：</label>
       {/*下拉菜单按钮*/}
       <button 
         className="btn btn-secondary dropdown-toggle" id="btn-dropdown"
@@ -78,21 +78,21 @@ const mapState = state => ({
 
 const mapDispatch = dispatch => ({
   handleToggleShowDateMenu(){
-    dispatch(actionCreators.getToggleShowDateMenuAction())
+    dispatch(actions.getToggleShowDateMenuAction())
   },
   handleChooseYear(event,item){
     event.preventDefault()
-    dispatch(actionCreators.getChooseYearAction(item))
+    dispatch(actions.getChooseYearAction(item))
   },
   handleChooseMonth(event,item){
     event.preventDefault()
-    dispatch(actionCreators.getChooseMonthAction(item))
+    dispatch(actions.getChooseMonthAction(item))
   },
   handleClick(e){
     if(node.current.contains(e.target)){
       return
     }else{
-      dispatch(actionCreators.getCloseDateMenuAction())
+      dispatch(actions.getCloseDateMenuAction())
     }
   }
 })
