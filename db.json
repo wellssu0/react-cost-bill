@@ -1,134 +1,144 @@
 {
   "categories": [
-    {"id": 0, "name": "旅行", "type": "OUT_TYPE", "iconName": "ios-plane"},
-    {"id": 1, "name": "餐饮", "type": "OUT_TYPE", "iconName": "ios-restaurant"},
-    {"id": 2, "name": "购物", "type": "OUT_TYPE", "iconName": "ios-basket"},
-    {"id": 3, "name": "数码", "type": "OUT_TYPE", "iconName": "ios-phone-portrait"},
-    {"id": 4, "name": "交通", "type": "OUT_TYPE", "iconName": "ios-bus"},
-    {"id": 5, "name": "娱乐", "type": "OUT_TYPE", "iconName": "ios-beer"},
-    {"id": 6, "name": "医疗", "type": "OUT_TYPE", "iconName": "ios-medkit"},
-    {"id": 7, "name": "宠物", "type": "OUT_TYPE", "iconName": "ios-paw"},
-    {"id": 8, "name": "其他", "type": "OUT_TYPE", "iconName": "ios-keypad"},
-    {"id": 9, "name": "工资", "type": "IN_TYPE", "iconName": "ios-card"},
-    {"id": 10, "name": "兼职", "type": "IN_TYPE", "iconName": "ios-cash"},
-    {"id": 11, "name": "礼金", "type": "IN_TYPE", "iconName": "md-mail"},
-    {"id": 12, "name": "理财", "type": "IN_TYPE", "iconName": "logo-yen"},
-    {"id": 13, "name": "其他", "type": "IN_TYPE", "iconName": "ios-keypad"}
+    {
+      "id": 0,
+      "name": "旅行",
+      "type": "OUT_TYPE",
+      "iconName": "ios-plane"
+    },
+    {
+      "id": 1,
+      "name": "餐饮",
+      "type": "OUT_TYPE",
+      "iconName": "ios-restaurant"
+    },
+    {
+      "id": 2,
+      "name": "购物",
+      "type": "OUT_TYPE",
+      "iconName": "ios-basket"
+    },
+    {
+      "id": 3,
+      "name": "数码",
+      "type": "OUT_TYPE",
+      "iconName": "ios-phone-portrait"
+    },
+    {
+      "id": 4,
+      "name": "交通",
+      "type": "OUT_TYPE",
+      "iconName": "ios-bus"
+    },
+    {
+      "id": 5,
+      "name": "娱乐",
+      "type": "OUT_TYPE",
+      "iconName": "ios-beer"
+    },
+    {
+      "id": 6,
+      "name": "医疗",
+      "type": "OUT_TYPE",
+      "iconName": "ios-medkit"
+    },
+    {
+      "id": 7,
+      "name": "宠物",
+      "type": "OUT_TYPE",
+      "iconName": "ios-paw"
+    },
+    {
+      "id": 8,
+      "name": "其他",
+      "type": "OUT_TYPE",
+      "iconName": "ios-keypad"
+    },
+    {
+      "id": 9,
+      "name": "工资",
+      "type": "IN_TYPE",
+      "iconName": "ios-card"
+    },
+    {
+      "id": 10,
+      "name": "兼职",
+      "type": "IN_TYPE",
+      "iconName": "ios-cash"
+    },
+    {
+      "id": 11,
+      "name": "礼金",
+      "type": "IN_TYPE",
+      "iconName": "md-mail"
+    },
+    {
+      "id": 12,
+      "name": "理财",
+      "type": "IN_TYPE",
+      "iconName": "logo-yen"
+    },
+    {
+      "id": 13,
+      "name": "其他",
+      "type": "IN_TYPE",
+      "iconName": "ios-keypad"
+    }
   ],
   "items": [
     {
-      "title": "再次更新标题",
-      "price": 2000,
-      "date": "2018-09-15",
-      "monthCategory": "2018-9",
-      "id": "_qmatbbwq0",
-      "cid": "6",
-      "timestamp": 1536969600000
+      "id": "_sagvyw5o3",
+      "title": "fsdfddfseeeedfs",
+      "price": 4,
+      "date": "2019-09-27",
+      "monthCategory": "2019-9",
+      "timestamp": 1569542400000,
+      "cid": 4
     },
     {
-      "title": "新的吃饭",
-      "price": 2000,
-      "date": "2018-11-15",
-      "monthCategory": "2018-11",
-      "id": "_qmatbbw11",
-      "cid": "6",
-      "timestamp": 1542896269187
+      "id": "_15gn69s8m",
+      "title": "买菜",
+      "price": 180,
+      "date": "2019-10-03",
+      "monthCategory": "2019-10",
+      "timestamp": 1570060800000,
+      "cid": 9
     },
     {
-      "title": "请别人喝茶",
-      "price": 300,
-      "date": "2018-11-15",
-      "monthCategory": "2018-11",
-      "id": "_qryggm533",
-      "cid": "3",
-      "timestamp": 1534291200000
+      "id": "_38gqzu9x3",
+      "title": "买衣服",
+      "price": 1600,
+      "date": "2019-10-12",
+      "monthCategory": null,
+      "timestamp": 1570838400000,
+      "cid": 2
     },
     {
-      "title": "饭局",
-      "price": 200,
-      "date": "2018-12-10",
-      "monthCategory": "2018-12",
-      "id": "_qmatbbw12",
-      "cid": "6",
-      "timestamp": 1544400000000
+      "id": "_dl9gxyw1d",
+      "title": "朋友聚会",
+      "price": 3800,
+      "date": "2019-10-15",
+      "monthCategory": "2019-10",
+      "timestamp": 1571097600000,
+      "cid": 5
     },
     {
-      "title": "饭局第二个",
-      "price": 300,
-      "date": "2018-12-10",
-      "monthCategory": "2018-12",
-      "id": "_qmatbbw22",
-      "cid": "6",
-      "timestamp": 1544400000000
+      "id": "_wf8yf02wj",
+      "title": "工资",
+      "price": 126056,
+      "date": "2019-10-10",
+      "monthCategory": "2019-10",
+      "timestamp": 1570665600000,
+      "cid": 12
     },
     {
-      "title": "兼职收入",
-      "price": 500,
-      "date": "2018-12-05",
-      "monthCategory": "2018-12",
-      "timestamp": 1543968000000,
-      "id": "_2cdxkbtzi",
-      "cid": "11"
-    },
-    {
-      "title": "收入",
-      "price": 100,
-      "date": "2018-12-05",
-      "monthCategory": "2018-12",
-      "timestamp": 1543968000000,
-      "id": "_znmwyaciy",
-      "cid": "12"
-    },
-    {
-      "title": "汽车保养",
-      "price": 500,
-      "date": "2018-12-09",
-      "monthCategory": "2018-12",
-      "timestamp": 1544313600000,
-      "id": "_2c96vz8d7",
-      "cid": "7"
-    },
-    {
-      "title": "宠物美容",
-      "price": 200,
-      "date": "2018-12-07",
-      "monthCategory": "2018-12",
-      "timestamp": 1544140800000,
-      "id": "_dgqbpp4z8",
-      "cid": "9"
-    },
-    {
-      "title": "超市购物",
-      "price": 125,
-      "date": "2018-12-04",
-      "monthCategory": "2018-12",
-      "timestamp": 1543881600000,
-      "id": "_j0z9no9jk",
-      "cid": "3"
-    },
-    {
-      "title": "购买 iphone XR",
-      "price": 6000,
-      "date": "2018-12-03",
-      "monthCategory": "2018-12",
-      "timestamp": 1543795200000,
-      "id": "_yiwdttati",
-      "cid": "4"
-    },
-    {
-      "title": "入账工资",
-      "price": 25000,
-      "date": "2018-12-08",
-      "monthCategory": "2018-12",
-      "timestamp": 1544227200000,
-      "id": "_dotug7vnn",
-      "cid": "10",
-      "category": {
-        "name": "工资",
-        "iconName": "ios-card",
-        "id": "10",
-        "type": "income"
-      }
+      "id": "_t38yuyu99",
+      "title": "打车",
+      "price": 66,
+      "date": "2019-10-23",
+      "monthCategory": "2019-10",
+      "timestamp": 1571788800000,
+      "cid": 4
     }
   ]
 }

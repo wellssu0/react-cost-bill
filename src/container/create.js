@@ -1,50 +1,49 @@
 import React,{useEffect,memo} from 'react'
 import { connect } from 'react-redux'
-import {useHistory} from 'react-router-dom'
 
 import * as actions from '../actions'
-
 import ViewCategoryTab from '../components/ViewCategoryTab'
 import PriceForm from "../components/PriceForm";
 import CategoriesSelect from "../components/CategoriesSelect";
+import Loader from '../components/Loader';
 
 const Create = props => {
 
-  const { currentItemsAndCategory,showEditData} = props
-  let history = useHistory()
+  const {showEditData,isLoading} = props
   const { id } = props.match.params
 
   useEffect (() => {
     if(id !== undefined){
-      const currentItems = currentItemsAndCategory.toJS()
-      const editItemData = currentItems.filter(item => item.id*1 === id*1)
-      showEditData(editItemData[0],history)
+      showEditData(id)
     }
-  })
+  },[])
 
   return(
     <div className="container">
       <header className="jumbotron shadow-lg p-3 bg-white rounded">
-        <ViewCategoryTab/>
-        <CategoriesSelect/>
-        <PriceForm/>
+        {isLoading &&
+          <Loader/>
+        }
+        { !isLoading &&
+          <React.Fragment>
+            <ViewCategoryTab/>
+            <CategoriesSelect/>
+            <PriceForm/>
+          </React.Fragment>
+        }
       </header>
     </div>
   )
 }
 
 const mapState = state => ({
-  currentItemsAndCategory:state.getIn(['home','currentItemsAndCategory'])
+  currentItemsAndCategory:state.getIn(['home','currentItemsAndCategory']),
+  isLoading:state.getIn(['create','isLoading'])
 })
 
 const mapDispatch = dispatch => ({
-  showEditData(data,history){
-    //判断create页面刷新，内存清空了所以重定向到home页
-    if(data === undefined){
-      history.push('/')
-    }else{
-      dispatch(actions.showEditDataAction(data))
-    }
+  showEditData(id){
+    dispatch(actions.showEditDataAction(id))
   }
 })
 

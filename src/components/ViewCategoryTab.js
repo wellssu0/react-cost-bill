@@ -7,10 +7,10 @@ import * as actions from '../actions'
 const ViewCategroyTab = props => {
   const { activeTab, handleOutCategoriesTab, handleInCategoriesTab } = props
   return(
-    <ul className="nav nav-tabs nav-fill my-4">
+    <ul className="nav nav-tabs nav-fill my-4 font-weight-bold">
       <li className="nav-item">
         <a href='/'
-          className={activeTab===constants.OUT_TYPE ? "nav-link active" : "nav-link"}
+          className={activeTab===constants.OUT_TYPE ? "nav-link active " : "nav-link"}
           onClick={(event)=>handleOutCategoriesTab(event,activeTab)}
         >
           支出

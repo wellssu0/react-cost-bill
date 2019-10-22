@@ -16,8 +16,11 @@ export const getCloseDateMenuAction = () => ({
   type: constants.CLOSE_DATE_MENU,
 })
 export const getInitDateAction = () => ({
+  type: constants.GET_INIT_DATE,
+})
+export const InitDateAction = (date) => ({
   type: constants.INIT_DATE,
-  date: constants.getCurrentDate()
+  date
 })
 export const getListTabAction = () => ({
   type: constants.LIST_TAB,
@@ -25,13 +28,13 @@ export const getListTabAction = () => ({
 export const getChartTabAction = () => ({
   type: constants.CHART_TAB,
 })
-export const getInitItemsAction = (data) => ({
-  type: constants.INIT_ITEMS_DATA,
-  data,
-})
-export const getCurrentItemsAction = (data) => ({
+export const getCurrentItemsAction = (year,month) => ({
   type: constants.CURRENT_ITEMS_DATA,
-  data,
+  year,month
+})
+export const currentItemsAction = (data) => ({
+  type: constants.CURRENT_ITEMS,
+  data
 })
 export const getRemoveItemAction = (item) => ({
   type: constants.REMOVE_ITEM,
@@ -60,18 +63,28 @@ export const getChangeDateAction = (date) => ({
   type:constants.CHANGE_DATE,
   date
 })
-export const getAddItemAction = (newItem) => ({
+export const getAddItemAction = (item) => ({
   type:constants.ADD_ITEM,
-  newItem
+  item
 })
 export const getInitCategoryAction = () => ({
   type:constants.INIT_CATEGORY,
 })
-export const showEditDataAction = (data) => ({
+export const showEditDataAction = (id) => ({
   type:constants.SHOW_EDIT_DATA,
-  data
+  id
+})
+export const openRefresh = () => ({
+  type:constants.OPEN_REFRESH,
+})
+export const showEditData = (item) => ({
+  type:constants.SHOW_EDIT_ITEM,
+  item
 })
 export const getReplaceItemAction = (item) => ({
   type:constants.REPLACE_EDIT_DATA,
   item
+})
+export const openLoading = () => ({
+  type:constants.LOADING
 })

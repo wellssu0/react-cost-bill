@@ -10,8 +10,9 @@ const defaultState = fromJS({
   editMode:false,
   title:'',
   price:'',
-  date:'',
-  editItem:null
+  date: constants.getNowDate(),
+  editItem:null,
+  isLoading:false,
 })
 
 export default (state = defaultState , action) => {
@@ -38,15 +39,19 @@ export default (state = defaultState , action) => {
         editMode:false,
         editItem:null,
       })
-    case constants.SHOW_EDIT_DATA:
+    case constants.OPEN_REFRESH:
+      return state.set('isLoading',true)
+    case constants.SHOW_EDIT_ITEM:
       return state.merge({
-        activeTab: fromJS(action.data.category.type),
-        categorySelect: fromJS(action.data.category),
-        title:fromJS(action.data.title),
-        price:fromJS(action.data.price),
-        date:fromJS(action.data.date),
+        
+        activeTab: fromJS(action.item.category.type),
+        categorySelect: fromJS(action.item.category),
+        title:fromJS(action.item.title),
+        price:fromJS(action.item.price),
+        date:fromJS(action.item.date),
         editMode:true,
-        editItem:fromJS(action.data),
+        editItem:fromJS(action.item),
+        isLoading:false,
       })
     default:
       return state

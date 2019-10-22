@@ -1,34 +1,42 @@
 import { fromJS } from 'immutable'
-
 import * as constants from '../constants'
 
 const defaultState = fromJS({
   tabView: constants.LIST_VIEW,
   currentDate: null,
+  monthCategory:null,
   selectYear:null,
   selectMonth:null,
+  isLoading:false,
   showDateMenu: false,
-  items:[],
   currentItemsAndCategory:[],
 })
 
 const homeReducer = (state = defaultState , action) => {
   switch(action.type){
+    case constants.INIT_DATE:
+      return state.merge({
+        isLoading:true,
+        selectMonth:fromJS(action.date.month),
+        selectYear:fromJS(action.date.year),
+        currentDate:fromJS(action.date),
+        monthCategory:fromJS(action.date.year+"-"+action.date.month)
+      })
     case constants.TOGGLE_DATE_MENU:
       return state.set('showDateMenu',!state.get('showDateMenu'))
+    case constants.LOADING:
+      return state.set('isLoading',true)
     case constants.CHOOSE_YEAR:
-      return state.set('selectYear',fromJS(action.item))
+      return state.merge({
+        selectYear:fromJS(action.item),
+        monthCategory:fromJS(action.item + "-" + state.get('selectMonth'))
+      })
     case constants.CHOOSE_MONTH:
       return state.merge({
         selectMonth:fromJS(action.item),
         showDateMenu:false,
-        currentDate:fromJS({ year: state.get('selectYear'), month: action.item})
-      })
-    case constants.INIT_DATE:
-      return state.merge({
-        selectMonth:fromJS(action.date.month),
-        selectYear:fromJS(action.date.year),
-        currentDate:fromJS(action.date)
+        currentDate:fromJS({ year: state.get('selectYear'), month: action.item}),
+        monthCategory:fromJS(state.get('selectYear')+ "-" + action.item)
       })
     case constants.CLOSE_DATE_MENU:
       return state.set('showDateMenu',false)
@@ -36,18 +44,8 @@ const homeReducer = (state = defaultState , action) => {
       return state.set('tabView',fromJS(constants.LIST_VIEW))
     case constants.CHART_TAB:
       return state.set('tabView',fromJS(constants.CHART_VIEW))
-    case constants.INIT_ITEMS_DATA:
-      return state.set('items',state.get('items').concat(
-        Array.isArray(action.data) ? fromJS(action.data) : fromJS([action.data]) ))
-    case constants.CURRENT_ITEMS_DATA:
-      return state.set('currentItemsAndCategory',fromJS(action.data))
-    case constants.REMOVE_ITEM:
-      return state.set('items',state.get('items').filter(item=>item.get('id') !== action.item.get('id')))
-    //Capture the action emitted by create page,and then add the item
-    case constants.ADD_ITEM:
-      return state.set('items',state.get('items').push(fromJS(action.newItem)))
-    case constants.REPLACE_EDIT_DATA:
-      return state.set('items',state.get('items').map(item=>(item.get('id')*1 === action.item.id*1) ? fromJS(action.item): item))
+    case constants.CURRENT_ITEMS:
+      return state.set('isLoading',false).set('currentItemsAndCategory',fromJS(action.data))
     default:
       return state
   }

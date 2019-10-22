@@ -8,7 +8,7 @@ import * as constants from '../constants'
 
 const DetailList = (props) => {
   let history = useHistory()
-  const { currentItemsAndCategory, handleModifyItem, handleRemoveItem } = props
+  const {selectYear,selectMonth, currentItemsAndCategory, handleModifyItem, handleRemoveItem } = props
   return (
     <ul className="list-group ">
     {
@@ -24,9 +24,8 @@ const DetailList = (props) => {
             <span className="col-1">
               <Ionicon
                 className="rounded-circle"
-                fontSize="30px"
-                style={{backgroundColor:'#007bff',padding:'5px'}}
-                color={'#fff'}
+                fontSize="35px"
+                color={'#007bff'}
                 icon={item.getIn(['category','iconName'])}
               /></span>
             <span className="col-3">{item.get('title')}</span>
@@ -39,19 +38,19 @@ const DetailList = (props) => {
             >
               <Ionicon
                 className="rounded-circle"
-                fontSize="30px"
-                style={{backgroundColor:'#28a745',padding:'5px'}}
-                color={'#fff'}
-                icon='ios-create-outline'
+                fontSize="35px"
+               
+                color={'green'}
+                icon='md-create'
               />
             </a>
             <a href="/" className="col-1"
-              onClick={(event)=>handleRemoveItem(event,item)}
+              onClick={(event)=>handleRemoveItem(event,item,selectYear,selectMonth)}
             >
               <Ionicon
                 className="rounded-circle"
-                fontSize="40px"
-                color={'red'}
+                fontSize="35px"
+                color={'#898989'}
                 icon='md-trash'
               />
             </a>
@@ -69,9 +68,10 @@ const mapState = state => ({
   selectMonth:state.getIn(['home','selectMonth'])
 })
 const mapDispatch = dispatch => ({
-  handleRemoveItem(event,item){
+  handleRemoveItem(event,item,selectYear,selectMonth){
     event.preventDefault()
     dispatch(actions.getRemoveItemAction(item))
+    dispatch(actions.getCurrentItemsAction(selectYear,selectMonth))
   },
   handleModifyItem(event,item,history){
     event.preventDefault()

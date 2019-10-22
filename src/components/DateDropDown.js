@@ -7,7 +7,16 @@ import * as constants from '../constants'
 const node = React.createRef()
 
 const DateDropDown = (props) => { 
-  const { selectYear, selectMonth, currentDate , showDateMenu, handleClick,handleToggleShowDateMenu, handleChooseYear, handleChooseMonth} = props
+  const { 
+    selectYear, 
+    selectMonth, 
+    currentDate , 
+    showDateMenu, 
+    handleClick,
+    handleToggleShowDateMenu, 
+    handleChooseYear, 
+    handleChooseMonth,
+  } = props
   
   useEffect(()=>{
     if(showDateMenu){

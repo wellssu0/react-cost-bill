@@ -7,7 +7,7 @@ const TotalPrice = (props) => {
   const { currentItemsAndCategory } = props
   const currentItems = currentItemsAndCategory.toJS()
   let incomePrice = 0, outcomePrice = 0
-  for(let i =0 ; i<currentItems.length; i++){
+  for(let i =0 ; i< currentItems.length; i++){
     if(currentItems[i].category.type === constants.IN_TYPE){
       incomePrice += currentItems[i].price
     }else{

@@ -3,11 +3,8 @@ import { PieChart, Pie, Tooltip, Cell, ResponsiveContainer } from 'recharts'
 import { Colors } from '../constants'
 
 const DetailFigure = props => {
-  
   const ColorsArr = Object.keys(Colors).map(key => Colors[key])
-
   const { categoryData , title} = props
-  
   if(categoryData.length === 0) {
   return <h3 style={{textAlign: 'center'}} className="mx-3 font-weight-light">{title}没有数据</h3>
   }
