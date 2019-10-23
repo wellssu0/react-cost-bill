@@ -14,13 +14,15 @@
 - 实现页面的路由跳转
 - 实现数据的可视化
 
+
 截图：
 
-![下拉菜单展示](https://github.com/wellssu0/react-cost-bill/blob/master/readmeImg/o (1).gif)
 
-![图表模式展示](https://github.com/wellssu0/react-cost-bill/blob/master/readmeImg/o（2）.gif)
+![下拉菜单展示](https://github.com/wellssu0/react-cost-bill/blob/master/image/1.gif)
 
-![添加展示](https://github.com/wellssu0/react-cost-bill/blob/master/readmeImg/o（3）.gif)
+![图表模式展示](https://github.com/wellssu0/react-cost-bill/blob/master/image/2.gif)
 
-![修改删除展示](https://github.com/wellssu0/react-cost-bill/blob/master/readmeImg/o（4）.gif)
+![添加展示](https://github.com/wellssu0/react-cost-bill/blob/master/image/3.gif)
+
+![修改删除展示](https://github.com/wellssu0/react-cost-bill/blob/master/image/4.gif)
 
