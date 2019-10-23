@@ -1,10 +1,6 @@
----
-typora-root-url: readmeImg
----
 
 
-
-
+## 每日记账
 
 在线地址： http://z0108f2pgetr.leanapp.cn/ 
 
@@ -22,11 +18,11 @@ typora-root-url: readmeImg
 
 截图：
 
-![下拉菜单展示](/1.gif)
+![下拉菜单展示](https://github.com/wellssu0/react-tictactoe/blob/master/readmeImg/1.gif)
 
-![图表模式展示](/2.gif)
+![图表模式展示](https://github.com/wellssu0/react-tictactoe/blob/master/readmeImg/2.gif)
 
-![添加展示](/3.gif)
+![添加展示](https://github.com/wellssu0/react-tictactoe/blob/master/readmeImg/3.gif)
 
-![修改删除展示](/4.gif)
+![修改删除展示](https://github.com/wellssu0/react-tictactoe/blob/master/readmeImg/4.gif)
 
