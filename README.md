@@ -16,7 +16,7 @@
 
 截图：
 
-![下拉菜单展示](https://github.com/wellssu0/react-cost-bill/blob/master/readmeImg/o（1）.gif)
+![下拉菜单展示](https://github.com/wellssu0/react-cost-bill/blob/master/readmeImg/o (1).gif)
 
 ![图表模式展示](https://github.com/wellssu0/react-cost-bill/blob/master/readmeImg/o（2）.gif)
 
