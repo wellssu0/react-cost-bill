@@ -16,11 +16,11 @@
 
 截图：
 
-![下拉菜单展示](https://github.com/wellssu0/react-tictactoe/blob/master/readmeImg/o（1）.gif)
+![下拉菜单展示](https://github.com/wellssu0/react-cost-bill/blob/master/readmeImg/o（1）.gif)
 
-![图表模式展示](https://github.com/wellssu0/react-tictactoe/blob/master/readmeImg/o（2）.gif)
+![图表模式展示](https://github.com/wellssu0/react-cost-bill/blob/master/readmeImg/o（2）.gif)
 
-![添加展示](https://github.com/wellssu0/react-tictactoe/blob/master/readmeImg/o（3）.gif)
+![添加展示](https://github.com/wellssu0/react-cost-bill/blob/master/readmeImg/o（3）.gif)
 
-![修改删除展示](https://github.com/wellssu0/react-tictactoe/blob/master/readmeImg/o（4）.gif)
+![修改删除展示](https://github.com/wellssu0/react-cost-bill/blob/master/readmeImg/o（4）.gif)
 
