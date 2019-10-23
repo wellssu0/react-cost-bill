@@ -72,6 +72,11 @@ export const getNowDate = () => {
   const date =  new Date()
   return date.getFullYear()+"-"+(date.getMonth()+1)+"-"+date.getDate()
 }
+//initMonthCategory
+export const initMonthCategory = (str) => {
+  const date = str ? new Date(str) : new Date()
+  return date.getFullYear()+"-"+(date.getMonth()+1)
+}
 
 //日期补齐函数
 export const padLeft = (num) => {
@@ -151,3 +156,10 @@ export const ID = () => {
   // after the decimal.
   return '_' + Math.random().toString(36).substr(2, 9);
 }
+
+
+export const checkTitle = (str) => {
+  const RegExp = /[`~!@#$%^&*()_+<>?:"{},./;'[\]]/im;
+  return !RegExp.test(str)
+}
+ 

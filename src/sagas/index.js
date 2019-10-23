@@ -39,6 +39,7 @@ function* editItem(action) {
 //添加item
 function* addItem(action) {
   try {
+    console.log({...action.item})
     yield call(axios.post,'/items',{...action.item})
   } catch(e) {
       console.log(e)

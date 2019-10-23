@@ -37,33 +37,36 @@ const Home = props =>{
           </div>
         </div>
       </header>
-      { isLoading &&
-        <Loader/>
-      }
-      { !isLoading &&
-        <div className="jumbotron shadow-lg p-3 mb-5 bg-white rounded">
-          <Link 
-            to='create' 
-            className="btn btn-secondary btn-lg btn-block font-weight-light"
-          >
-            添加新的记账记录
-          </Link>
-          <SwitchViewTab />
-          {tabView === constants.LIST_VIEW &&
-            <DetailList />
-          }
-          {tabView === constants.CHART_VIEW &&
-            <React.Fragment>
-              <DetailFigure title={'本月支出'} categoryData={
-                constants.getPieCategoryData(currentItemsAndCategory,constants.OUT_TYPE)
-              }/>
-              <DetailFigure title={'本月收入'} categoryData={
-                constants.getPieCategoryData(currentItemsAndCategory,constants.IN_TYPE)
-              }/>
-            </React.Fragment>
-          }
-        </div>
-      }
+      <div className="jumbotron shadow-lg p-3 mb-5 bg-white rounded">
+        <Link 
+          to='create' 
+          className="btn btn-secondary btn-lg btn-block font-weight-light"
+        >
+          添加新的记账记录
+        </Link>
+        <SwitchViewTab />
+        { isLoading &&
+          <Loader/>
+        }
+        { !isLoading &&
+          <React.Fragment>
+            {tabView === constants.LIST_VIEW &&
+              <DetailList />
+            }
+            {tabView === constants.CHART_VIEW &&
+              <React.Fragment>
+                <DetailFigure title={'本月支出'} categoryData={
+                  constants.getPieCategoryData(currentItemsAndCategory,constants.OUT_TYPE)
+                }/>
+                <DetailFigure title={'本月收入'} categoryData={
+                  constants.getPieCategoryData(currentItemsAndCategory,constants.IN_TYPE)
+                }/>
+              </React.Fragment>
+            }
+          </React.Fragment>
+        }
+      </div>
+     
     </div>
   )
 }

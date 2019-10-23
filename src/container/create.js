@@ -13,9 +13,7 @@ const Create = props => {
   const { id } = props.match.params
 
   useEffect (() => {
-    if(id !== undefined){
-      showEditData(id)
-    }
+    id !== undefined && showEditData(id)
   },[])
 
   return(

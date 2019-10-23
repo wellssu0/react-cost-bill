@@ -102,7 +102,7 @@
       "date": "2019-10-03",
       "monthCategory": "2019-10",
       "timestamp": 1570060800000,
-      "cid": 9
+      "cid": 6
     },
     {
       "id": "_38gqzu9x3",
@@ -125,7 +125,7 @@
     {
       "id": "_wf8yf02wj",
       "title": "工资",
-      "price": 126056,
+      "price": 12605,
       "date": "2019-10-10",
       "monthCategory": "2019-10",
       "timestamp": 1570665600000,
@@ -139,6 +139,69 @@
       "monthCategory": "2019-10",
       "timestamp": 1571788800000,
       "cid": 4
+    },
+    {
+      "id": "_iwpvh18h1",
+      "title": "画图",
+      "price": 500,
+      "date": "2019-10-15",
+      "monthCategory": "2019-10",
+      "timestamp": 1571097600000,
+      "cid": 13
+    },
+    {
+      "id": "_fheykuggi",
+      "title": "shenmeshijai",
+      "price": 0,
+      "date": "2019-10-24",
+      "monthCategory": null,
+      "timestamp": 1571875200000,
+      "cid": 0
+    },
+    {
+      "id": "_yo9zbcjp5",
+      "title": "111222",
+      "price": 32323,
+      "date": "2019-10-24",
+      "monthCategory": null,
+      "timestamp": 1571875200000,
+      "cid": 0
+    },
+    {
+      "id": "_nw85eoj9s",
+      "title": "gongzi",
+      "price": 33,
+      "date": "2019-10-23",
+      "monthCategory": null,
+      "timestamp": 1571788800000,
+      "cid": 0
+    },
+    {
+      "id": "_c9abr1ny4",
+      "title": "111122",
+      "price": 1111111,
+      "date": "2019-10-23",
+      "monthCategory": null,
+      "timestamp": 1571788800000,
+      "cid": 8
+    },
+    {
+      "id": "_jcnxraql0",
+      "title": "22",
+      "price": 432,
+      "date": "2019-10-23",
+      "monthCategory": null,
+      "timestamp": 1571788800000,
+      "cid": 1
+    },
+    {
+      "id": "_pnc8qdz2l",
+      "title": "什么事件",
+      "price": 333,
+      "date": "2019-10-23",
+      "monthCategory": null,
+      "timestamp": 1571788800000,
+      "cid": 0
     }
   ]
 }

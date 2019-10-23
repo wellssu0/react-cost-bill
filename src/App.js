@@ -6,8 +6,6 @@ import store from "./store"
 import Home from './container/home'
 import Create from './container/create'
 
-import './components/mockItemsData'
-
 const App = () => {
   return (
     <Provider store={store}>

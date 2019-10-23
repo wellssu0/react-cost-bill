@@ -37,7 +37,24 @@ const PriceForm = props => {
     }
   }
  
+  const titleIsValid = () =>{
+    return title !== null && title !== '' && constants.checkTitle(title) ? "form-control is-valid" : "form-control is-invalid"
+  }
+  const priceIsValid = () =>{
+    return price > 0 && price <= 99999999 ? "form-control is-valid" : "form-control is-invalid"
+  }
+  const dateIsValid = () =>{
+    return date !== '' ? "form-control is-valid" : "form-control is-invalid"
+  }
 
+  const isCanSubmit = () => {
+    if(title !== null && title !== '' && constants.checkTitle(title) && 
+       price > 0 && price <= 99999999 && date !== ''){
+         return true
+       }else{
+         return false
+       }
+  }
 
   return(
     <div className='px-3 pl-3 row justify-content-between'>
@@ -46,23 +63,33 @@ const PriceForm = props => {
           <div className="input-group-prepend">
             <span className="input-group-text">T</span>
           </div>
-          <input type="text" className="form-control" id="input-title"  value={title} placeholder='写备注 ...' onChange={event=>handleTitle(event)}/>
+          <input 
+            type="text" className={titleIsValid()} id="input-title"  
+            value={title===null ? '' : title}  placeholder='写备注 ...'  
+            onChange={event=>handleTitle(event)}
+          />
         </div>
         <label htmlFor="input-price">金额:</label>
         <div className="input-group mb-3">
           <div className="input-group-prepend">
             <span className="input-group-text">$</span>
           </div>
-          <input type="number" className="form-control" id='input-price' value={price} placeholder='写金额 ...' onChange={event=>handlePrice(event)}/>
+          <input 
+            type="number" className={priceIsValid()} id='input-price' 
+            value={price===null ? '' : price} placeholder='写金额 ...' onChange={event=>handlePrice(event)}
+          />
         </div>
         <label htmlFor="input-date">日期:</label>
         <div className="input-group mb-3">
           <div className="input-group-prepend">
             <span className="input-group-text">D</span>
           </div>
-          <input type="date" className="form-control" id='input-date' value={date}  onChange={event=>handleDate(event)}/>
+          <input 
+            type="date" className={dateIsValid()}  id='input-date' value={date}  
+            onChange={event=>handleDate(event)}
+          />
         </div>
-        <button type="button" className="btn btn-lg btn-primary col-5" onClick={()=>handleSubmit(getNewItem(),history,editMode)}>提交</button>
+        <button type="button" className="btn btn-lg btn-primary col-5" onClick={()=>isCanSubmit() && handleSubmit(getNewItem(),history,editMode)}>提交</button>
         <button type="button" className="btn btn-lg btn-secondary col-5" onClick={()=>handleCencelSubmit(history)}>取消</button>
       </div>
   )
@@ -74,7 +101,7 @@ const mapState = state => ({
   title:state.getIn(['create','title']),
   price:state.getIn(['create','price']),
   date:state.getIn(['create','date']),
-  monthCategory:state.getIn(['home','monthCategory']),
+  monthCategory:state.getIn(['create','monthCategory']),
   editItem:state.getIn(['create','editItem']),
   categorySelect:state.getIn(['create','categorySelect'])
 })
